@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hitman1_stand.png-a48e2137e86f89743abb322e681b75b7.stex"
+path="res://.import/barrelBlack.png-9df478ddbf7c3a95c90384bb27736be4.stex"
 
 [deps]
 
-source_file="res://sprites/hitman1_stand.png"
-source_md5="2270d70229eefb0670ee40d5d6bbb647"
+source_file="res://sprites/projectiles/barrelBlack.png"
+source_md5="a03c70247a2120d33a0a0c8a1c62da55"
 
-dest_files=[ "res://.import/hitman1_stand.png-a48e2137e86f89743abb322e681b75b7.stex" ]
-dest_md5="77021cd73aac1a0e045d9f8d53e8476c"
+dest_files=[ "res://.import/barrelBlack.png-9df478ddbf7c3a95c90384bb27736be4.stex" ]
+dest_md5="0cee1dac3647b1a9410c4f27538a7703"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

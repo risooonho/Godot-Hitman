@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://guns/Bullet.gd" type="Script" id=1]
-[ext_resource path="res://sprites/bulletBeige_outline.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://sprites/projectiles/barrelBlack.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 9.98907
-height = 16.0318
+radius = 7.66662
+height = 34.6885
 
 [node name="Bullet" type="Area2D"]
 

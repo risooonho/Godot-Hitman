@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bulletBeige_outline.png-11173c0c1a64e224e3bc81964e1b6c48.stex"
+path="res://.import/hitman1_stand.png-723677fddc852296a4e1790733176bf7.stex"
 
 [deps]
 
-source_file="res://sprites/bulletBeige_outline.png"
-source_md5="8321972e4672fc2677bdf090a656656f"
+source_file="res://sprites/player/hitman1_stand.png"
+source_md5="2270d70229eefb0670ee40d5d6bbb647"
 
-dest_files=[ "res://.import/bulletBeige_outline.png-11173c0c1a64e224e3bc81964e1b6c48.stex" ]
-dest_md5="47fba3ed3a45e941bc856bf302e4fd52"
+dest_files=[ "res://.import/hitman1_stand.png-723677fddc852296a4e1790733176bf7.stex" ]
+dest_md5="37247c4eac6f5a5685c6a99a5c5172ff"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

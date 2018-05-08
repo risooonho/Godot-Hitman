@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hitman1_hold.png-1d6349f5e4651ff358ecaefc3a1805b6.stex"
+path="res://.import/hitman1_hold.png-6e49de50eb8a5bc5703f7c28afbca635.stex"
 
 [deps]
 
-source_file="res://sprites/hitman1_hold.png"
+source_file="res://sprites/player/hitman1_hold.png"
 source_md5="620f82e3e2a3fde9ded5e609e59e32b3"
 
-dest_files=[ "res://.import/hitman1_hold.png-1d6349f5e4651ff358ecaefc3a1805b6.stex" ]
-dest_md5="02d280ebfd35549038a6a76a9b5609be"
+dest_files=[ "res://.import/hitman1_hold.png-6e49de50eb8a5bc5703f7c28afbca635.stex" ]
+dest_md5="4fb089eb55cc075075476d8e573132d3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

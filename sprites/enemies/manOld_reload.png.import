@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hitman1_silencer.png-423e728e8f949096a738f2bba18b0f96.stex"
+path="res://.import/manOld_reload.png-4ac9bc608ae3371183aeb0a48c66f802.stex"
 
 [deps]
 
-source_file="res://sprites/hitman1_silencer.png"
-source_md5="9e09e4e3800a0e907f938af48a76a570"
+source_file="res://sprites/enemies/manOld_reload.png"
+source_md5="7c1b07bf67ad2f1d2652f7054041dd1c"
 
-dest_files=[ "res://.import/hitman1_silencer.png-423e728e8f949096a738f2bba18b0f96.stex" ]
-dest_md5="cb1b4606daea786c369fa09391875aa1"
+dest_files=[ "res://.import/manOld_reload.png-4ac9bc608ae3371183aeb0a48c66f802.stex" ]
+dest_md5="5880bc5534d3267555fa6c2c223d1805"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

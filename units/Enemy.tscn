@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://BloodSpray.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 200.0
+
+[node name="Enemy" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+rounds = 8
+shot_error = 0.0981748
+Bullet = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+animation = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Aim" type="Position2D" parent="." index="2"]
+
+position = Vector2( 25, 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BulletContainer" type="Node" parent="." index="3"]
+
+[node name="ShootingTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = true
+autostart = false
+
+[node name="ReloadTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.5
+one_shot = true
+autostart = false
+
+[node name="NoiseArea2D" type="Area2D" parent="." index="6"]
+
+editor/display_folded = true
+rotation = -1.5708
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoiseArea2D" index="0"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Explosion" parent="." index="7" instance=ExtResource( 3 )]
+
+[connection signal="timeout" from="ShootingTimer" to="." method="_on_ShootingTimer_timeout"]
+
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_ReloadTimer_timeout"]
+
+[connection signal="body_entered" from="NoiseArea2D" to="." method="_on_NoiseArea2D_body_entered"]
+
+[connection signal="body_exited" from="NoiseArea2D" to="." method="_on_NoiseArea2D_body_exited"]
+
+

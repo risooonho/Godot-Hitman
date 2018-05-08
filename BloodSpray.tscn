@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 0.471186 )
+colors = PoolColorArray( 0.453125, 0.0566406, 0.0566406, 1, 0.648438, 0.182373, 0.182373, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="Curve" id=3]
+
+min_value = 0.99
+max_value = 25.0
+bake_resolution = 100
+_data = [ Vector2( 4.69852e-05, 5.11719 ), 0.0, 0.0, 0, 0, Vector2( 0.998959, 24.585 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+
+flags = 4
+width = 2048
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 2
+emission_box_extents = Vector3( 5, 5, 1 )
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 50.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 300.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+
+[node name="Explosion" type="Particles2D"]
+
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.01
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 5 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Time", "Transform" ]
+
+

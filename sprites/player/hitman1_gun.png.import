@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spritesheet_tiles.png-7326f33d687b7343cf9053fc0ae72553.stex"
+path="res://.import/hitman1_gun.png-13ece5660d7fa49fd2e33cae56989f3b.stex"
 
 [deps]
 
-source_file="res://sprites/spritesheet_tiles.png"
-source_md5="2c56382d221252337e29e91e6132efc7"
+source_file="res://sprites/player/hitman1_gun.png"
+source_md5="99d34212d3c7a4f8908f774398faa9cf"
 
-dest_files=[ "res://.import/spritesheet_tiles.png-7326f33d687b7343cf9053fc0ae72553.stex" ]
-dest_md5="f14555193d67a984c8feab206b216c80"
+dest_files=[ "res://.import/hitman1_gun.png-13ece5660d7fa49fd2e33cae56989f3b.stex" ]
+dest_md5="978bd7499457f512adb85d33b2fd8518"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

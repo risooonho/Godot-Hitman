@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hitman1_reload.png-f90a621067c6e6ce8856d5abe4ffc5e2.stex"
+path="res://.import/manBrown_reload.png-f1ca6168c93e38cca445bbb38613f54c.stex"
 
 [deps]
 
-source_file="res://sprites/hitman1_reload.png"
-source_md5="b6b8a8ac7fd621ee61e2c337696b2305"
+source_file="res://sprites/enemies/manBrown_reload.png"
+source_md5="ba7a8867eb46de0bff3f4c9013ccefa9"
 
-dest_files=[ "res://.import/hitman1_reload.png-f90a621067c6e6ce8856d5abe4ffc5e2.stex" ]
-dest_md5="e82d2b09d07c611aaa80710f8e4305cf"
+dest_files=[ "res://.import/manBrown_reload.png-f1ca6168c93e38cca445bbb38613f54c.stex" ]
+dest_md5="c70ec857616d3847d51074aed3581665"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
