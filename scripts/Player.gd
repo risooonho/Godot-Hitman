@@ -1,10 +1,12 @@
 extends KinematicBody2D
 
+signal game_over
+signal explode
+signal shoot
+
 export (int) var walk_speed = 300
-export (int) var run_speed  = 500
-export (int) var clips  = 5
+export (int) var run_speed = 500
 export (int) var rounds = 8
-export (PackedScene) var Bullet
 
 var velocity  = Vector2()
 var speed     = walk_speed
@@ -28,7 +30,7 @@ func _physics_process(delta):
 		force.y += 1
 		
 	if force.length() > 0:
-		velocity = force.normalized() * speed * delta
+		velocity = force.normalized() * speed
 		
 		if not Input.is_action_pressed('strafe'):
 			rotation = force.angle()
@@ -36,7 +38,7 @@ func _physics_process(delta):
 		velocity *= 0
 		
 	if not Input.is_action_pressed('lock'):
-		move_and_collide(velocity)
+		move_and_slide(velocity)
 
 func _input(event):
 	if event.is_action_pressed('run'):
@@ -53,7 +55,6 @@ func _input(event):
 func reload():
 	if not reloading and not shooting:
 		reloading = true
-		rounds    -= 1
 		$AnimatedSprite.animation = 'reload'
 		$ReloadTimer.start()
 	
@@ -64,9 +65,13 @@ func shoot():
 		$AnimatedSprite.animation = 'shoot'
 		$ShootingTimer.start()
 		
-		var bullet = Bullet.instance()
-		$BulletContainer.add_child(bullet)
-		bullet.start_at($Aim.global_position, rotation)
+		emit_signal('shoot', $Aim.global_position, rotation)
+		
+func struck(pos, dir):
+#	emit_signal('explode', pos, dir)
+#	emit_signal('game_over')
+#	queue_free()
+	pass
 
 func _on_ReloadTimer_timeout():
 	reloading = false

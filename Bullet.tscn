@@ -18,10 +18,12 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
+collision_mask = 7
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 speed = 1000
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
@@ -33,6 +35,15 @@ _sections_unfolded = [ "Transform" ]
 
 shape = SubResource( 1 )
 
+[node name="Lifetime" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
+
+[connection signal="timeout" from="Lifetime" to="." method="_on_Lifetime_timeout"]
 
 

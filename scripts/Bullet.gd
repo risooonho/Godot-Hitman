@@ -1,8 +1,6 @@
 extends Area2D
 
-signal struck
-
-export (int) var speed = 500
+export (int) var speed = 100
 
 var velocity = Vector2()
 var screen
@@ -10,7 +8,7 @@ var screen
 func _ready():
 	screen = get_viewport_rect().size
 	
-func start_at(pos, angle):
+func init(pos, angle):
 	position = pos
 	rotation = angle - PI/2
 	velocity = Vector2(1, 0).rotated(angle)
@@ -23,4 +21,12 @@ func _process(delta):
 
 func _on_Bullet_body_entered(body):
 	queue_free()
-	body.struck()
+	
+	if body.name == 'Player':
+		body.struck(position, rotation + PI/2)
+	elif body.get_groups().has('enemies'):
+		body.struck(position, rotation + PI/2)
+
+
+func _on_Lifetime_timeout():
+	queue_free()
